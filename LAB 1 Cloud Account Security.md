@@ -101,11 +101,11 @@ aws $EP iam attach-group-policy --group-name Admins \
   --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
   
 # 2.2 Create a personal admin user
-aws $EP iam create-user --user-name CloudAdmin_Aisy
+aws $EP iam create-user --user-name CloudAdmin_AlifAqlan
 
 # 2.3 Put the user in the group (permissions flow from the group)
 aws $EP iam add-user-to-group --group-name Admins \
-  --user-name CloudAdmin_Aisy
+  --user-name CloudAdmin_AlifAqlan
   
 # 2.4 Verify the membership
 aws $EP iam get-group --group-name Admins
@@ -127,14 +127,14 @@ aws $EP iam get-group --group-name Admins
 
 ```Bash
 # 3.1 Create a read-only user
-aws $EP iam create-user --user-name Analyst_Aisy
+aws $EP iam create-user --user-name Analyst_AlifAqlan
 
 # 3.2 Attach a scoped, read-only policy (S3 read-only)
-aws $EP iam attach-user-policy --user-name Analyst_Aisy \
+aws $EP iam attach-user-policy --user-name Analyst_AlifAqlan \
   --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
   
 # 3.3 List what the user can do
-aws $EP iam list-attached-user-policies --user-name Analyst_Aisy
+aws $EP iam list-attached-user-policies --user-name Analyst_AlifAqlan
 ```
 
 **Evidence:**
@@ -151,13 +151,13 @@ aws $EP iam list-attached-user-policies --user-name Analyst_Aisy
 
 ```bash
 # 4.1 Create an access key for the Analyst
-aws $EP iam create-access-key --user-name Analyst_haziq
+aws $EP iam create-access-key --user-name Analyst_Alifaqlan
 
 # 4.2 List access keys (note the AccessKeyId and status)
-aws $EP iam list-access-keys --user-name Analyst_haziq
+aws $EP iam list-access-keys --user-name Analyst_Alifaqlan
 
 # 4.3 Rotate: deactivate the old key
-aws $EP iam update-access-key --user-name Analyst_haziq \
+aws $EP iam update-access-key --user-name Analyst_AlifAqlan \
   --access-key-id <PASTE_KEY_ID> --status Inactive
 ```
 
