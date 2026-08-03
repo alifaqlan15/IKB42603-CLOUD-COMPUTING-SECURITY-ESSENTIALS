@@ -259,7 +259,7 @@ An IAM User is a permanent identity tied to a specific person or app, using long
 
 **Q3. Explain least privilege using the Analyst account, and how it reduces blast radius if compromised.**
 
-Least privilege means giving an identity only the exact permissions required to do its job and nothing more. In this lab, the `Analyst_Aisy` account was restricted to `AmazonS3ReadOnlyAccess`. If these credentials were ever leaked or stolen, the attacker could only view S3 files—they couldn't delete data, modify settings, spin up servers, or touch other AWS services. This limits the "blast radius" by containing the damage to S3 read access instead of compromising the whole cloud infrastructure.
+Least privilege means giving an identity only the exact permissions required to do its job and nothing more. In this lab, the `Analyst_AlifAqlan` account was restricted to `AmazonS3ReadOnlyAccess`. If these credentials were ever leaked or stolen, the attacker could only view S3 files—they couldn't delete data, modify settings, spin up servers, or touch other AWS services. This limits the "blast radius" by containing the damage to S3 read access instead of compromising the whole cloud infrastructure.
 
 **Q4. In Kubernetes, what is the difference between a Role and a RoleBinding?**
 
