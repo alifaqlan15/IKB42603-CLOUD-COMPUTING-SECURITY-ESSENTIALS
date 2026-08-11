@@ -35,7 +35,7 @@ At the end of this lab, the following concepts were demonstrated:
 * Kubernetes
 * Calico
 
-## Lab Arrangement (2 Sessions over 2 Weeks)
+## 4. Lab Arrangement (2 Sessions over 2 Weeks)
 
 | Session | Week | Focus |
 | :--- | :--- | :--- |
@@ -46,7 +46,7 @@ At the end of this lab, the following concepts were demonstrated:
 
 ---
 
-## Technical Prerequisites
+## 5.Technical Prerequisites
 
 * A laptop with **at least 8 GB RAM** and admin rights.
 * **Docker Desktop / Docker Engine** — free.
@@ -55,7 +55,7 @@ At the end of this lab, the following concepts were demonstrated:
 
 ---
 
-## Lab Arrangement (2 Sessions over 2 Weeks)
+## 6. Lab Arrangement (2 Sessions over 2 Weeks)
 
 | Session | Week | Focus |
 | :--- | :--- | :--- |
@@ -66,7 +66,7 @@ At the end of this lab, the following concepts were demonstrated:
 
 ---
 
-## Technical Prerequisites
+## 7. Technical Prerequisites
 
 * A laptop with **at least 8 GB RAM** and admin rights.
 * **Docker Desktop / Docker Engine** — free.
@@ -92,8 +92,8 @@ The default kind CNI was disabled so that Calico could be used to enforce Networ
 
 ---
 
-### Session A (Week 3) — Compute Isolation & the Default-Open
-Risk
+# Session A (Week 3) — Compute Isolation & the Default-Open Risk
+
 
 ## 4. Cluster Setup
 
