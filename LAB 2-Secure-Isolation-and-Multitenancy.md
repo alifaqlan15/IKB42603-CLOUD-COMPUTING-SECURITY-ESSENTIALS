@@ -95,9 +95,9 @@ The default kind CNI was disabled so that Calico could be used to enforce Networ
 # Session A (Week 3) — Compute Isolation & the Default-Open Risk
 
 
-## 4. Cluster Setup
+## 1. Cluster Setup
 
-### 4.1 Create Kubernetes Cluster
+### 1.1 Create Kubernetes Cluster
 
 The cluster was created using kind with the default CNI disabled:
 
@@ -120,7 +120,7 @@ Evidence :
 
 <img width="777" height="82" alt="Image" src="https://github.com/user-attachments/assets/2bc116e8-34b7-4bab-a768-cb16f0790d59" />
 
-### 4.2 Install Calico
+### 1.2 Install Calico
 
 Calico was installed as the cluster networking component:
 
@@ -151,7 +151,7 @@ Evidence :
 
 ---
 
-## 5. Task 1 — Two Tenants on One Cluster
+## 2. Task 1 — Two Tenants on One Cluster
 
 Two customers were modelled as two Kubernetes namespaces:
 
@@ -187,7 +187,7 @@ Evidence :
 
 ---
 
-## 6. Task 2 — Observe the Default Open Risk
+## 3. Task 2 — Observe the Default Open Risk
 
 Retrieve the tenant-b Service IP:
 ```
@@ -213,7 +213,7 @@ Evidence :
 <img width="927" height="92" alt="Image" src="https://github.com/user-attachments/assets/924a8b0c-4749-4de8-984f-0e526bd4b4b1" />
 
 
-## Task 3 — Contain the Noisy Neighbour (Resource Quotas)
+## 4. Task 3 — Contain the Noisy Neighbour (Resource Quotas)
 
 Create and apply the ResourceQuota for tenant-a:
 
@@ -238,9 +238,9 @@ Evidence :
 
 ---
 
-### Session B (Week 4) — Network & Storage Isolation
+# Session B (Week 4) — Network & Storage Isolation
 
-## Task 4 — Default-Deny Network Isolation
+## 5. Task 4 — Default-Deny Network Isolation
 
 Apply the default-deny NetworkPolicy to tenant-a:
 
@@ -260,7 +260,7 @@ Evidence :
 
 <img width="933" height="490" alt="Image" src="https://github.com/user-attachments/assets/705b3a4f-198d-42d9-90c2-87ae7bb12df3" />
 
-## Task 5 — Storage & Secret Isolation
+## 6. Task 5 — Storage & Secret Isolation
 
 Create Secrets & Service Account:
 
@@ -310,7 +310,7 @@ Evidence :
 
 <img width="932" height="172" alt="Image" src="https://github.com/user-attachments/assets/f5e64b63-b7ee-441d-bc3e-fce89bf481d7" />
 
-## Task 6 — Data Remanence & Secure Deletion
+## 7. Task 6 — Data Remanence & Secure Deletion
 
 Demonstrate Data Remanence (Standard Delete):
 
@@ -334,7 +334,7 @@ Evidence :
 
 ---
 
-## Verify NetworkPolicy
+## 8. Verify NetworkPolicy
 
 The NetworkPolicy configuration was verified using:
 
@@ -354,7 +354,7 @@ Evidence :
 
 ---
 
-## Verify ResourceQuota
+## 9. Verify ResourceQuota
 
 The ResourceQuota was verified using:
 
@@ -368,7 +368,7 @@ Evidence :
 
 ---
 
-## 12. Short-Answer Questions
+## 10. Short-Answer Questions
 
 **Q1. Why can containers in different namespaces reach each other by default, and why is that dangerous in multi-tenant cloud?**
 
@@ -401,7 +401,7 @@ Data remanence refers to the residual data that remains on a storage device even
 
 ---
 
-## 13. Security Best-Practices Checklist
+## 11. Security Best-Practices Checklist
 
 - [x] Tenants are separated into distinct namespaces.
 - [x] A default-deny `NetworkPolicy` blocks cross-tenant traffic and was verified before and after.
@@ -411,7 +411,7 @@ Data remanence refers to the residual data that remains on a storage device even
 
 ---
 
-## 14. Conclusion
+## 12. Conclusion
 
 This lab provided hands-on experience in building a secure multi-tenant environment on Kubernetes by implementing defense-in-depth security controls. The practical exercises clearly proved that native Kubernetes installations are open and insecure out of the box, relying entirely on administrators to enforce strict isolation boundaries across compute, network, and storage layers.
 
@@ -419,7 +419,7 @@ By combining logical namespaces and resource quotas, we successfully prevented r
 
 ---
 
-## 15. Cleanup & Teardown
+## 13. Cleanup & Teardown
 
 After all verification tests, screenshots, and documentation were completed, the lab environment was completely torn down using:
 
@@ -429,7 +429,7 @@ docker volume rm ccse-vol
 ```
 
 
-## References
+## 14. References
 
 1. Course lecture — Week 3 (Secure Isolation of Physical & Logical Infrastructure).
 2. Kubernetes Network Policies — kubernetes.io/docs/concepts/services-networking/networkpolicies
